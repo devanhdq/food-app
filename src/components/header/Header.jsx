@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container, Row} from "reactstrap";
-import {NavLink, Link} from "react-router-dom";
+import {Container} from "reactstrap";
+import {Link, NavLink} from "react-router-dom";
 
 import logo from "../../assets/images/res-logo.png"
 
