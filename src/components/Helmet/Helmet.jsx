@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Helmet = ({props}) => {
+const Helmet = (props) => {
     document.title = "AQ_Food | " + props.title
     return (
         <div>
