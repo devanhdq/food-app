@@ -6,16 +6,16 @@
 /* reset default style */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* base style */
 
 body {
-  background: #fcfcfc;
-  font-family: "Istok Web", sans-serif;
+    background: #fcfcfc;
+    font-family: "Istok Web", sans-serif;
 }
 
 h1,
@@ -24,21 +24,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "RocknRoll One", sans-serif !important;
+    font-family: "RocknRoll One", sans-serif !important;
 }
 
 a {
-  text-decoration: none;
-  color: unset;
+    text-decoration: none;
+    color: unset;
 }
 
 h1,
 h2 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: #212245;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #212245;
 }
 
 section {
-  padding: 60px 0px;
+    padding: 60px 0;
+}
+
+@media only screen and(max-width: 768px) {
+    section {
+        padding: 40px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
 }
