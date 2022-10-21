@@ -1,25 +1,24 @@
 .header {
     width: 100%;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
 }
 
 .logo {
     text-align: center;
 }
-
 .logo img {
     width: calc(100% - 60%);
     object-fit: contain;
+    margin-top: -40px;
 }
 
 .logo h5 {
     font-weight: 600;
     font-size: 1rem;
     color: #212245;
-    margin-top: -10px;
+    margin-top: -40px;
     margin-bottom: 0;
-
 }
 
 .menu a {
@@ -27,8 +26,6 @@
     font-size: 1rem;
     color: #212245;
     transition: 0.3s;
-    cursor: pointer;
-
 }
 
 .menu a:hover {
@@ -39,7 +36,9 @@
     color: #df2020 !important;
 }
 
-.cart__icon i, .user i, .mobile__menu i {
+.cart__icon i,
+.user i,
+.mobile__menu i {
     font-size: 1.3rem;
     color: #212245;
     cursor: pointer;
@@ -51,10 +50,10 @@
 
 .cart__badge {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: -10px;
-    background-color: #df2020;
-    color: #ffff;
+    background: #df2020;
+    color: #fff;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -74,6 +73,8 @@
     position: sticky;
     top: 0;
     left: 0;
+    background: #fff;
+    z-index: 99999;
     box-shadow: 5px 5px 15px -5px #fde4e4;
 }
 
@@ -81,7 +82,6 @@
     .logo img {
         width: calc(100% - 70%);
     }
-
     .logo h5 {
         font-size: 0.8rem;
         margin-top: -15px;
@@ -89,14 +89,13 @@
 
     .navigation {
         position: fixed;
-        left: 0;
         top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        background: rgba(0, 0, 0, 0.425);
         z-index: 99;
-        background-color: rgba(155, 155, 155, 0.76);
         display: none;
-
     }
 
     .menu {
@@ -105,7 +104,7 @@
         right: 0;
         width: 250px;
         height: 100%;
-        background: white;
+        background: #fff;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -121,7 +120,9 @@
         display: block;
     }
 
-    .cart__icon i, .user i, .mobile__menu i {
+    .cart__icon i,
+    .user i,
+    .mobile__menu i {
         font-size: 1rem;
     }
 
@@ -131,15 +132,16 @@
 }
 
 @media only screen and (max-width: 768px) {
-
     .header {
         width: 100%;
-        height: 50px;
-        line-height: 50px;
+        height: 80px;
+        line-height: 80px;
     }
 
+    .logo img {
+        margin-top: -70px !important;
+    }
     .logo h5 {
-        margin-top: 0;
+        margin-top: -55px;
     }
 }
-

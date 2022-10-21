@@ -1,9 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Container} from "reactstrap";
 import {Link, NavLink} from "react-router-dom";
 
 import logo from "../../assets/images/res-logo.png"
 import "./header.css"
+import {useSelector} from "react-redux";
 
 const nav__link = [
     {path: 'home', display: "Home"},
@@ -13,10 +14,31 @@ const nav__link = [
 ]
 
 const Header = () => {
-    const menuRef = useRef(null)
+    const menuRef = useRef(null);
+    const headerRef = useRef(null);
+    // const totalQuantity = useSelector(state => state.cart.totalQuantity)
+    // const totalQuantity = useSelector(state => {
+    //     console.log(state)
+    // })
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (
+                document.body.scrollTop > 80 ||
+                document.documentElement.scrollTop > 80
+            ) {
+                headerRef.current.classList.add("header__shrink");
+            } else {
+                headerRef.current.classList.remove("header__shrink");
+            }
+        });
+
+        return () => window.removeEventListener("scroll");
+    }, []);
+
     const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
     return (
-        <header className="header">
+        <header className="header" ref={headerRef}>
             <Container>
                 <div className="nav__wrapper d-flex align-items-center justify-content-between">
                     <div className="logo">
